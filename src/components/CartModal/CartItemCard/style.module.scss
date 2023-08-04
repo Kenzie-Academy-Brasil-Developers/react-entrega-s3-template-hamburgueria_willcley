@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > button {
+        color: var(--color-grey100);
+
+        &:hover {
+            color: var(--color-secondary);
+        }
+    }
+}
+
+.card__content {
+    display: flex;
+    gap: .5rem;
+
+    & > img {
+        background-color: var(--color-grey100);
+        width: 5rem;;
+        padding: .75rem;
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & > p {
+            color: var(--color-grey300);
+            margin: .5rem 0;
+        }
+    }
+}

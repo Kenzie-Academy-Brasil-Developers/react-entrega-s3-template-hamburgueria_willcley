@@ -1,0 +1,86 @@
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%primary {
+  background-color: var(--color-grey100);
+  color: var(--color-white);
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.btn__primary {
+  @extend %flex;
+  @extend %primary;
+
+  height: 3.75rem;
+  padding: 0 1.25rem;
+}
+
+.btn__primary--medium {
+  @extend %flex;
+  @extend %primary;
+
+  height: 2.5rem;
+  padding: 0 1.25rem;
+}
+
+.btn__cart {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-grey100);
+  width: 2.25rem;
+  height: 2.25rem;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  & > span {
+    @extend %primary;
+
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 0;
+    right: 0;
+    padding: .25rem;
+  }
+}
+
+.btn__all {
+  color: var(--color-grey100);
+  width: 2.25rem;
+  height: 2.25rem;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.input__search {
+  display: flex;
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--color-grey100);
+  border-radius: .5rem;
+
+  &:focus-within {
+    border: 2px solid var(--color-grey600);
+  }
+
+  & > input {
+    width: 100%;
+    min-width: 280px;
+
+    &::placeholder {
+      color: var(--color-grey100);
+    }
+  }
+}

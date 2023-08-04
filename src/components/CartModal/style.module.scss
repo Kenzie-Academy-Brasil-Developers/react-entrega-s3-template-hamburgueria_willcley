@@ -1,0 +1,71 @@
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .25);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 30rem;
+    margin: auto 1.25rem;
+    border-radius: .25rem;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: .75rem 1.375rem;
+    border-radius: .25rem .25rem 0 0;
+
+    & > button {
+        display: flex;
+        align-items: center;
+        color: var(--color-grey100);
+    }
+}
+
+.modal__list {
+    margin: 1.25rem 1.25rem 0;
+    border-bottom: 2px solid var(--color-grey100);
+
+    & li {
+        margin-bottom: 1.125rem;
+    }
+
+    & > ul > p {
+        padding: 0 0 1rem;
+        text-align: center;
+    }
+}
+
+.modal__value {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1.25rem 1.25rem;
+
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+
+        & > .price {
+            color: var(--color-grey300);
+        }
+    }
+
+    & > button:hover {
+        background-color: var(--color-secondary);
+    }
+}

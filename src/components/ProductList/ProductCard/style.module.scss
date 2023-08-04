@@ -1,0 +1,44 @@
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  @extend %flexColumn;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-grey0);
+  width: 18.75rem;
+  min-width: 18.75rem;
+  border: 2px solid var(--color-grey100);
+  border-radius: .25rem;
+
+  &:hover {
+    border: 2px solid var(--color-primary);
+  }
+}
+
+.card__img {
+  display: flex;
+  justify-content: center;
+  height: 9.625rem;
+
+  & > img {
+    height: 100%;
+  }
+}
+
+.card__container {
+  @extend %flexColumn;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 1.75rem 1.25rem 1.25rem;
+}
+
+.container__span {
+  color: var(--color-primary);
+}

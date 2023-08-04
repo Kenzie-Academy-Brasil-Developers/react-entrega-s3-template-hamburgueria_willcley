@@ -1,0 +1,35 @@
+.list__container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1.25rem;
+  max-width: 85rem;
+  padding: 2.5rem 1rem;
+
+  &::-webkit-scrollbar {
+    appearance: none;
+  }
+}
+
+@media (min-width: 679px) {
+  .list__container {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+    padding: 2.5rem 0;
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 996px) {
+  .list__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1330px) {
+  .list__container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+  }
+}
