@@ -6,7 +6,7 @@ import { useKeydown } from '../../hooks/useKeydown';
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
 
-export const CartModal = ({ cartList, setCartList, setOpenModal, removeFromCart }) => {
+export const CartModal = ({ cartList, setCartList, setCartAmount, setOpenModal, removeFromCart }) => {
   const totalSum = () => {
     return cartList.reduce((prevValue, product) => prevValue + product.amountPrice, 0);
   };
@@ -70,6 +70,7 @@ export const CartModal = ({ cartList, setCartList, setOpenModal, removeFromCart 
             onClick={() => {
               if (cartList.length > 0) {
                 setCartList([]);
+                setCartAmount(0);
                 toast.success('Carrinho esvaziado com sucesso', {
                   autoClose: 2000,
                 });

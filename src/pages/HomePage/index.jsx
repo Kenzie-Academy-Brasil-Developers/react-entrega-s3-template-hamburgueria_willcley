@@ -89,10 +89,8 @@ export const HomePage = () => {
   return (
     <>
       <Header
-        cartList={cartList}
         cartAmount={cartAmount}
         setOpenModal={setOpenModal}
-        search={search}
         setSearch={setSearch}
       />
       <main>
@@ -104,6 +102,7 @@ export const HomePage = () => {
           <CartModal
             cartList={cartList}
             setCartList={setCartList}
+            setCartAmount={setCartAmount}
             setOpenModal={setOpenModal}
             removeFromCart={removeFromCart}
           />

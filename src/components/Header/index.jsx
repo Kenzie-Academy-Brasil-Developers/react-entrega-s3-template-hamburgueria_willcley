@@ -2,9 +2,8 @@ import styles from './style.module.scss';
 import { useState } from 'react';
 import Logo from '../../assets/Logo.svg';
 import { MdSearch, MdShoppingCart } from 'react-icons/md';
-import { FaReplyAll } from 'react-icons/fa';
 
-export const Header = ({ cartList, cartAmount, setOpenModal, search, setSearch }) => {
+export const Header = ({ cartAmount, setOpenModal, setSearch }) => {
   const [value, setValue] = useState('');
 
   const submit = (e) => {
@@ -27,11 +26,6 @@ export const Header = ({ cartList, cartAmount, setOpenModal, search, setSearch }
               <MdShoppingCart size={24} />
               <span>{cartAmount}</span>
             </button>
-            {search !== '' ? (
-              <button className='btn__all' onClick={() => setSearch('')}>
-                <FaReplyAll size={20}/>
-              </button>
-            ) : null}
           </div>
           <form className='input__search' onSubmit={submit}>
             <input
@@ -39,7 +33,6 @@ export const Header = ({ cartList, cartAmount, setOpenModal, search, setSearch }
               value={value}
               onChange={(e) => setValue(e.target.value)}
               placeholder='Digitar Pesquisa'
-              required
             />
             <button className='btn__primary--medium'>
               <MdSearch size={21} />
